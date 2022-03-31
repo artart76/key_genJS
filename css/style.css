@@ -1,0 +1,239 @@
+body {
+    box-sizing: border-box;
+    background: url(/img/back.jpg);
+}
+
+.container {
+    background: rgba(196, 199, 199, 0.726);
+    max-width: 475px;
+    
+    margin-top: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+.container h1 {
+    font-weight: 650;
+}
+.row {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+input[type=range] {
+    background: rgba(196, 199, 199, 0.2);
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    animation: 0.2s;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 2px #0d0d0d;
+    background:rgba(196, 199, 199, 0.2);
+    border-radius: 1px;
+    border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 2px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: rgb(129, 133, 133);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: rgba(196, 199, 199, 0.623);
+}
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    animation: 0.2s;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: rgba(71, 75, 75, 0.623);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #3b3b3b;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    animation: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: rgba(196, 199, 199, 0.623);
+    border: 0.1px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+    /* background:rgba(196, 199, 199, 0.623); */
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #727272;
+    cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: rgba(196, 199, 199, 0.623);
+}
+input[type=range]:focus::-ms-fill-upper {
+}
+
+
+.checkbox {
+    padding: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.checkbox input {
+    position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.checkbox__text {
+    position: relative;
+	padding: 0 0 0 60px;
+	cursor: pointer;
+}
+.checkbox__text::before {
+    content: '';
+	position: absolute;
+	top: -4px;
+	left: 0;
+	width: 50px;
+	height: 26px;
+	border-radius: 13px;
+	background: #CDD1DA;
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+	transition: .2s;
+}
+.checkbox__text::after {
+    content: '';
+	position: absolute;
+	top: -2px;
+	left: 2px;
+	width: 22px;
+	height: 22px;
+	border-radius: 10px;
+	background: #FFF;
+	box-shadow: 0 2px 5px rgba(0,0,0,.3);
+	transition: .2s;
+}
+.checkbox input:checked + .checkbox__text::before {
+    background: #393b368f;
+}
+.checkbox input:checked + .checkbox__text::after {
+    left: 26px;
+}
+.checkbox input:focus + .checkbox__text::before {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.2), 0 0 0 1px rgba(134, 134, 132, 0.651);
+}
+
+
+.btn-default {
+    display: block;
+    font-size: 1.1em;
+    width:150px;
+    text-decoration:none;
+    text-align:center;
+    font: bold 14px arial;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 20px auto;
+    color: #ccc;
+    background-color: #555;
+    background-image: linear-gradient(top, #888 0%, #555 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #888), color-stop(1, #555));
+    background-image: -moz-linear-gradient(top, #888 0%, #555 100%);
+    background-image: -o-linear-gradient(top, #888 0%, #555 100%);
+    border: none;
+    border-radius: 3px;
+    text-shadow: 0px -1px 0px #000;
+    box-shadow: 0px 1px 0px #666,0px 5px 0px #444,0px 6px 6px rgba(0, 0, 0, .6);
+    -webkit-transition: ease .15s all;
+    -moz-transition: ease .15s all;
+    -o-transition: ease .15s all;
+    transition: ease .15s all;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    animation: none;
+    outline: none;
+}
+.btn:hover, .btn:focus {
+    -webkit-animation: linear 1.2s light infinite;
+    -moz-animation: linear 1.2s light infinite;
+    -o-animation: linear 1.2s light infinite;
+    animation: linear 1.2s light infinite;
+    outline: none;
+}
+@-webkit-keyframes light{
+    0%   { color: #ddd; text-shadow: 0px -1px 0px #000; }
+    50%   { color: #fff; text-shadow: 0px -1px 0px #444, 0px 0px 5px #ffd, 0px 0px 8px #fff; }
+    100% { color: #ddd; text-shadow: 0px -1px 0px #000; }
+}
+    @-moz-keyframes light{
+    0%   { color: #ddd; text-shadow: 0px -1px 0px #000; }
+    50%   { color: #fff; text-shadow: 0px -1px 0px #444, 0px 0px 5px #ffd, 0px 0px 8px #fff; }
+    100% { color: #ddd; text-shadow: 0px -1px 0px #000; }
+
+}
+    @-o-keyframes light{
+    0%   { color: #ddd; text-shadow: 0px -1px 0px #000; }
+    50%   { color: #fff; text-shadow: 0px -1px 0px #444, 0px 0px 5px #ffd, 0px 0px 8px #fff; }
+    100% { color: #ddd; text-shadow: 0px -1px 0px #000; }
+
+}
+    @keyframes light{
+    0%   { color: #ddd; text-shadow: 0px -1px 0px #000; }
+    50%   { color: #fff; text-shadow: 0px -1px 0px #444, 0px 0px 5px #ffd, 0px 0px 8px #fff; }
+    100% { color: #ddd; text-shadow: 0px -1px 0px #000; }
+
+}
+.btn:active {
+    
+    text-shadow: 0px -1px 0px #444,0px 0px 5px #ffd,0px 0px 8px #fff;
+    box-shadow: 0px 1px 0px #666,0px 2px 0px #444,0px 2px 2px rgba(0, 0, 0, .9);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -o-transform: translateY(3px);
+    transform: translateY(3px);
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    animation: none;
+    outline: none;
+}
+
+.out {
+    margin-top: 30px;
+}
